@@ -3,8 +3,8 @@ $(function() {
         var id = $(this).data("id");
         var newEaten = $(this).data("neweaten");
 
-        var newEatenState + {
-            eaten: newEaten
+        var newEatenState = {
+            devoured: newEaten
         };
 
         $.ajax("api/burgers" + id, {
@@ -22,8 +22,8 @@ $(function() {
         event.preventDefault();
 
         var newBurger = {
-            name: ("#ca").val().trim(),
-            eaten: $("[name=eaten]:checked").val().trim()
+            name: $("#ca").val().trim(),
+            devoured: $("[name=eaten]:checked").val().trim()
         };
 
         $.ajax("api/burgers", {
